@@ -38,13 +38,30 @@ require_once __DIR__ . '/functions.php';
 <body class="text-white antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
+    <nav class="fixed top-0 left-0 right-0 z-50 mix-blend-difference bg-black/20 backdrop-blur">
         <div class="container mx-auto px-6 md:px-12 py-6 flex items-center justify-between">
-            <a href="<?php echo SITE_URL; ?>" class="text-sm font-bold tracking-tight "><span class="text-xl uppercase">CODE HUNT'S </span> <span class="text-xl mx-3">/</span> research</a>
-            <div class="flex items-center gap-8">
-                <a href="<?php echo SITE_URL; ?>" class="text-sm font-medium text-neutral-300 hover:text-white transition-colors">Home</a>
-                <a href="#" class="text-sm font-medium text-neutral-300 hover:text-white transition-colors">About</a>
-                <a href="mailto:hello@mnfst.studio" class="text-sm font-medium text-neutral-300 hover:text-white transition-colors">Contact</a>
+            <!-- Logo -->
+            <a href="<?php echo SITE_URL; ?>" class="text-sm font-bold tracking-tight">
+                <span class="text-xl uppercase">CODE HUNT'S </span>
+                <span class="text-xl mx-3">/</span>
+                <span>research</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="https://codehuntspk.com" class="text-sm font-medium text-neutral-300 hover:text-white transition-colors">Our Website</a>
+            </div>
+
+            <!-- Hamburger Menu Button (Mobile) -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-neutral-300 hover:text-white hover:bg-white/10 transition-colors">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by Default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/80 backdrop-blur-sm border-t border-white/[0.05]">
+            <div class="container mx-auto px-6 py-4 flex flex-col gap-4">
+                <a href="https://codehuntspk.com" class="text-sm font-medium text-neutral-300 hover:text-white transition-colors py-2">Our Website</a>
             </div>
         </div>
     </nav>
@@ -120,5 +137,28 @@ require_once __DIR__ . '/functions.php';
     </footer>
 
     <script>lucide.createIcons();</script>
+    <script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the mobile menu button and the mobile menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Toggle the mobile menu when the button is clicked
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close the mobile menu when clicking outside of it
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnButton = mobileMenuButton.contains(event.target);
+
+            if (!isClickInsideMenu && !isClickOnButton) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    });
+</script>
 </body>
 </html>
