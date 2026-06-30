@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+
+# Serve real files and directories as-is
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Route post slugs to post.php
+RewriteRule ^([a-z0-9][a-z0-9-]*)/?$ post.php?slug=$1 [L,QSA]
