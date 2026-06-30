@@ -39,8 +39,8 @@ require_once __DIR__ . '/functions.php';
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 py-6 flex items-center justify-between">
-            <a href="<?php echo SITE_URL; ?>" class="text-xl font-bold tracking-tight uppercase">MNFST</a>
+        <div class="container mx-auto px-6 md:px-12 py-6 flex items-center justify-between">
+            <a href="<?php echo SITE_URL; ?>" class="text-sm font-bold tracking-tight "><span class="text-xl uppercase">CODE HUNT'S </span> <span class="text-xl mx-3">/</span> research</a>
             <div class="flex items-center gap-8">
                 <a href="<?php echo SITE_URL; ?>" class="text-sm font-medium text-neutral-300 hover:text-white transition-colors">Home</a>
                 <a href="#" class="text-sm font-medium text-neutral-300 hover:text-white transition-colors">About</a>
@@ -52,7 +52,7 @@ require_once __DIR__ . '/functions.php';
     <!-- Hero Section -->
     <section class="min-h-[70vh] flex items-center relative grid-bg">
         <div class="absolute inset-0" style="background: radial-gradient(ellipse at top right, rgba(49,46,129,0.2), #18181b, #000000); opacity: 0.6;"></div>
-        <div class="max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-16 relative z-10 w-full">
+        <div class="container mx-auto px-6 md:px-12 pt-32 pb-16 relative z-10 w-full">
             <div class="max-w-3xl">
                 <p class="text-[10px] font-mono uppercase tracking-widest text-neutral-500 mb-6">Guides & Insights</p>
                 <h1 class="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter leading-[0.9] mb-8">
@@ -68,7 +68,7 @@ require_once __DIR__ . '/functions.php';
     </section>
 
     <!-- Guides Grid -->
-    <section class="max-w-7xl mx-auto px-6 md:px-12 py-24">
+    <section class="container mx-auto px-6 md:px-12 py-24">
         <div class="flex items-end justify-between mb-12">
             <div>
                 <p class="text-[10px] font-mono uppercase tracking-widest text-neutral-500 mb-3"><?php echo $totalPosts; ?> articles</p>
@@ -109,7 +109,7 @@ require_once __DIR__ . '/functions.php';
 
     <!-- Footer -->
     <footer class="border-t border-white/[0.05]">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="container mx-auto px-6 md:px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-4">
             <p class="text-xs text-neutral-600">© <?php echo date('Y'); ?> <?php echo e(SITE_NAME); ?></p>
             <div class="flex items-center gap-6">
                 <a href="#" class="text-neutral-600 hover:text-neutral-400 transition-colors"><i data-lucide="twitter" class="w-4 h-4"></i></a>
