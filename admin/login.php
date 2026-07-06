@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="card">
         <h1>Admin Login</h1>
-        <p class="subtitle">Sign in to manage your guides.</p>
+        <p class="subtitle">Sign in to manage your articles.</p>
 
         <?php if ($error): ?>
             <div class="error"><?php echo $error; ?></div>

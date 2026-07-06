@@ -153,7 +153,7 @@ if (!$post) {
         <div class="absolute inset-0" style="background: radial-gradient(ellipse at top right, rgba(49,46,129,0.15), #18181b, #000000); opacity: 0.5;"></div>
         <div class="max-w-7xl mx-auto px-6 md:px-12 pt-36 pb-12 relative z-10">
             <a href="<?php echo SITE_URL; ?>" class="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-neutral-300 transition-colors mb-8">
-                <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to all guides
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to all articles
             </a>
             <div class="flex items-center gap-3 mb-6">
                 <span class="text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400"><?php echo e($post['category']); ?></span>
@@ -205,7 +205,7 @@ if (!$post) {
     <footer class="border-t border-white/[0.05]">
         <div class="container mx-auto px-6 md:px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-4">
             <p class="text-xs text-neutral-600">© <?php echo date('Y'); ?> <?php echo e(SITE_NAME); ?></p>
-            <a href="<?php echo SITE_URL; ?>" class="text-sm text-neutral-500 hover:text-neutral-300 transition-colors">Back to all guides →</a>
+            <a href="<?php echo SITE_URL; ?>" class="text-sm text-neutral-500 hover:text-neutral-300 transition-colors">Back to all articles →</a>
         </div>
     </footer>
 
